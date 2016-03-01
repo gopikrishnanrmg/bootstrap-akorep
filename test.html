@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Akorep's Guide to Gaming</title>
+  <title>Gamestop</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -167,8 +167,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#myPage">HOME</a></li>
-        <li><a href="#band">INTRO</a></li>
-        <li><a href="#tour">SCHEDULE</a></li>
+        <li><a href="#band">ABOUT</a></li>
+        <li><a href="#tour">TRAILERS</a></li>
         <li><a href="#contact">CONTACT</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
       </ul>
@@ -261,31 +261,31 @@
 </div>
 <div id="tour" class="bg-1">
   <div class="container">
-  <h3 class="text-center">Offers of the month</h3>
-    <p class="text-center">Check out the offers for this month<br> and select what you like!</p>
+  <h3 class="text-center">Latest Trailers</h3>
+    <p class="text-center">Check out the latest trailers releasing this month <br> and get ready to place your pre-orders!</p>
     <div class="row text-center">
       <div class="col-sm-4">
         <div class="thumbnail">
           <img src="img/gamesum.jpg" alt="Paris" width="300" height="168">
-          <p><strong>Survival Pack</strong></p>
-          <p>Three games for the price of one!</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Choose Offer</button>
+          <p><strong>Prototype</strong></p>
+          <p>Releasing on: June 2016</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">View Trailer</button>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
           <img src="img/gameautm.jpg" alt="New York" width="300" height="168">
-          <p><strong>War Pack</strong></p>
-          <p>Battlefield collection at 50% off!</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Choose Offer</button>
+          <p><strong>World of Tanks</strong></p>
+          <p>Releasing on: March 2016</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">View Trailer</button>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
           <img src="img/gamewint.jpg" alt="San Francisco" width="300" height="168">
-          <p><strong>Racing Pack</strong></p>
-          <p>NFS bundle at 25% off + free GT6 copy</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Choose Offer</button>
+          <p><strong>Gran Turismo 6</strong></p>
+          <p>To be announced on: May 2017</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">View Trailer</button>
         </div>
       </div>
     </div>
@@ -377,6 +377,34 @@
     </div>
   </div>
 </div>
+
+<div id="googleMap"></div>
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(9.093744, 76.492497);
+
+function initialize() {
+var mapProp = {
+center:myCenter,
+zoom:12,
+scrollwheel:false,
+draggable:false,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+position:myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
 
 </script>
 
